@@ -21,12 +21,20 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Mehrshad Ghasemi",
-    // OG image is set by app/opengraph-image.png (file convention) so crawlers use it, not the hero image
+    images: [
+      {
+        url: `${siteUrl}/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Mehrshad Ghasemi | Web & Mobile Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mehrshad Ghasemi | Web & Mobile Developer",
     description: "Web & Mobile Developer shipping real applications to production.",
+    images: [`${siteUrl}/opengraph-image.png`],
   },
 };
 
@@ -36,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" prefix="og: http://ogp.me/ns#">
       <body className={inter.className}>
         <Navigation />
         {children}
