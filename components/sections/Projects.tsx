@@ -6,6 +6,9 @@ import { ExternalLink, Smartphone, CheckCircle, Monitor } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
+// Update this when VanKirk domain changes
+const VANKIRK_LIVE_URL = "https://www.vankirkdevelopment.ca";
+
 const projects = [
   {
     title: "PropDesk",
@@ -32,7 +35,7 @@ const projects = [
     description:
       "Property development website for VanKirk Property Development showcasing pre-construction condominium projects in Whitby, Ontario. Features project showcases, registration system, and modern design highlighting luxury developments with 158 thoughtfully designed units.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-    live: "https://vankirkdev.vercel.app",
+    live: VANKIRK_LIVE_URL,
     featured: true,
     image: "/images/vankirk.png",
   },
